@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class AutomationEngineer {
 	
-	// Global variables for excel import
+	// Global variables for excel import test
 	public XSSFWorkbook workbook;
 	public XSSFSheet sheet;
 	public XSSFCell cell;
