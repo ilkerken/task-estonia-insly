@@ -13,7 +13,7 @@ public class AfterLoginTest {
 
 	TestData testData;
 
-// to do test ilker
+
 
 	private WebDriverWait wait1;
 
