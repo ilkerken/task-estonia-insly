@@ -15,20 +15,23 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class AutomationEngineer {
-// excel importu için kullanýlan global deðiþkenler
+	
+	// Global variables for excel import
 	public XSSFWorkbook workbook;
 	public XSSFSheet sheet;
 	public XSSFCell cell;
 	public File src;
 
-	//Selenium driver deðiþkenleri
+	//Selenium driver variables	
 	WebDriver driver;
 	WebDriverWait wait1;
-//excel datasý için deðiþkenler
+
+	//Variables for excel data
 	String companyname;
 	String workemail;
 	String suggestedpassword;
-	// class lar arasýnda data paylaþmak için
+
+	// To share data between classes
 	TestData testData = new TestData();
 
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -37,7 +40,9 @@ public class AutomationEngineer {
 		testOp.init();
 		Thread.sleep(2000);
 
-		testOp.checkBeforePageLoad();
+		// STEP 01
+		testOp.checkBeforePageLoad();		
+		
 		// STEP 02
 		testOp.fillFormValues();
 
@@ -137,8 +142,10 @@ public class AutomationEngineer {
 
 	public void fillFormValues() throws IOException, InterruptedException {
 
+		// STEP 02
+		
 		// File importing
-		src = new File("C:\\Users\\ierken\\Documents\\Automation\\files\\TestData.xlsx");
+		src = new File("C:\\Users\\deniz\\eclipse-workspace\\insly_old\\files\\TestData.xlsx");
 		FileInputStream finput = new FileInputStream(src);
 		workbook = new XSSFWorkbook(finput);
 		sheet = workbook.getSheetAt(0);
@@ -194,6 +201,8 @@ public class AutomationEngineer {
 
 	public void setAdminValues() throws InterruptedException {
 
+		// STEP 03
+		
 		// Filling work email on administrator account part
 		cell = sheet.getRow(0).getCell(5);
 		workemail = cell.getStringCellValue();
@@ -236,6 +245,9 @@ public class AutomationEngineer {
 	}
 
 	public void setTermsAndConditions() throws InterruptedException {
+		
+		// STEP 04
+		
 		// Ticking all Terms and conditions and openning/closing privacy policy
 		WebElement privacypolicy = driver.findElement(By.xpath("//*[@id=\"field_terms\"]/td[2]/div/div/label[2]/a"));
 		privacypolicy.click();
@@ -272,11 +284,14 @@ public class AutomationEngineer {
 	}
 
 	public void actionsAfterLogin() throws InterruptedException {
+		
+		// STEP 05
 
 		new AfterLoginTest().init(driver, testData);
 	}
 	public void close() throws InterruptedException  {
-	     	//Closing browser
+	     	
+		//Closing browser
 	     	driver.quit();	 
 	}
 }
