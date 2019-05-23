@@ -145,7 +145,7 @@ public class AutomationEngineer {
 		// STEP 02
 		
 		// File importing
-		src = new File("C:\\Users\\deniz\\eclipse-workspace\\insly_old\\files\\TestData.xlsx");
+		src = new File("C:\\Users\\ierken\\Documents\\Automation\\files\\TestData.xlsx");
 		FileInputStream finput = new FileInputStream(src);
 		workbook = new XSSFWorkbook(finput);
 		sheet = workbook.getSheetAt(0);
