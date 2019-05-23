@@ -14,7 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class AutomationEngineer {
+public class MainApp {
 	
 	// Global variables for excel import 
 	public XSSFWorkbook workbook;
@@ -36,7 +36,7 @@ public class AutomationEngineer {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
-		AutomationEngineer testOp = new AutomationEngineer();
+		MainApp testOp = new MainApp();
 		testOp.init();
 		Thread.sleep(2000);
 
