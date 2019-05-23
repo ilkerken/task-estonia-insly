@@ -6,12 +6,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/poi-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/poi-examples-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/poi-excelant-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-schemas-4.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/poi-scratchpad-4.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/ooxml-lib/curvesapi-1.06.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/ooxml-lib/xmlbeans-3.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/poi-bin-4.1.0-20190412/poi-4.1.0/lib/activation-1.1.1.jar"/>
@@ -33,12 +27,12 @@
 	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/selenium-java-3.141.59/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/selenium-java-3.141.59/libs/okio-1.14.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ierken/Documents/Automation/Libraries/sikulixapi-1.1.0.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
