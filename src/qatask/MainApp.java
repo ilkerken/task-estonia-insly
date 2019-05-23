@@ -15,18 +15,18 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class MainApp {
-	
-	// Global variables for excel import 
+
+	// Global variables for excel import
 	public XSSFWorkbook workbook;
 	public XSSFSheet sheet;
 	public XSSFCell cell;
 	public File src;
 
-	//Selenium driver variables	
+	// Selenium driver variables
 	WebDriver driver;
 	WebDriverWait wait1;
 
-	//Variables for excel data
+	// Variables for excel data
 	String companyname;
 	String workemail;
 	String suggestedpassword;
@@ -41,20 +41,20 @@ public class MainApp {
 		Thread.sleep(2000);
 
 		// STEP 01
-		testOp.checkBeforePageLoad();		
-		
+		testOp.checkBeforePageLoad();
+
 		// STEP 02
 		testOp.fillFormValues();
 
 		// STEP 03
 		testOp.setAdminValues();
-		
+
 		// STEP 04
 		testOp.setTermsAndConditions();
-		
+
 		// STEP 05
 		testOp.actionsAfterLogin();
-		
+
 		Thread.sleep(2000);
 		// Close browser
 		testOp.close();
@@ -143,9 +143,9 @@ public class MainApp {
 	public void fillFormValues() throws IOException, InterruptedException {
 
 		// STEP 02
-		
+
 		// File importing
-		
+
 		src = new File("resources/TestData.xlsx");
 		FileInputStream finput = new FileInputStream(src);
 		workbook = new XSSFWorkbook(finput);
@@ -157,7 +157,7 @@ public class MainApp {
 
 		// Filling Company name
 		cell = sheet.getRow(0).getCell(0);
-		companyname = cell.getStringCellValue();
+		companyname = cell.getStringCellValue() + "" + System.currentTimeMillis();
 		testData.setCompanyname(companyname);
 		driver.findElement(By.id("broker_name")).sendKeys(companyname);
 		System.out.println("Company name: Filled");
@@ -207,6 +207,7 @@ public class MainApp {
 		// Filling work email on administrator account part
 		cell = sheet.getRow(0).getCell(5);
 		workemail = cell.getStringCellValue();
+		workemail = workemail.replace("@", System.currentTimeMillis()+"@");
 		testData.setWorkemail(workemail);
 		driver.findElement(By.id("broker_admin_email")).sendKeys(workemail);
 		System.out.println("Work e-mail: Entered.");
@@ -246,9 +247,9 @@ public class MainApp {
 	}
 
 	public void setTermsAndConditions() throws InterruptedException {
-		
+
 		// STEP 04
-		
+
 		// Ticking all Terms and conditions and openning/closing privacy policy
 		WebElement privacypolicy = driver.findElement(By.xpath("//*[@id=\"field_terms\"]/td[2]/div/div/label[2]/a"));
 		privacypolicy.click();
@@ -285,14 +286,15 @@ public class MainApp {
 	}
 
 	public void actionsAfterLogin() throws InterruptedException {
-		
+
 		// STEP 05
 
 		new AfterLoginTest().init(driver, testData);
 	}
-	public void close() throws InterruptedException  {
-	     	
-		//Closing browser
-	     	driver.quit();	 
+
+	public void close() throws InterruptedException {
+
+		// Closing browser
+		driver.quit();
 	}
 }
