@@ -18,7 +18,7 @@
 		<spring.version>2.1.5.RELEASE</spring.version>
 	</properties>
 	<dependencies>
-		
+	
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

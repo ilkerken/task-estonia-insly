@@ -63,7 +63,7 @@ public class MainApp {
 
 	public void init() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 
 		driver = new ChromeDriver();
 		wait1 = new WebDriverWait(driver, 30);
@@ -145,7 +145,8 @@ public class MainApp {
 		// STEP 02
 		
 		// File importing
-		src = new File("C:\\Users\\ierken\\Documents\\Automation\\files\\TestData.xlsx");
+		
+		src = new File("resources/TestData.xlsx");
 		FileInputStream finput = new FileInputStream(src);
 		workbook = new XSSFWorkbook(finput);
 		sheet = workbook.getSheetAt(0);
