@@ -131,7 +131,7 @@ public class MainApp {
 		String processingpersonaldataactual = driver
 				.findElement(By.xpath("//*[@id=\"field_terms\"]/td[2]/div/div/label[3]")).getText();
 		if (processingpersonaldataexpected.contentEquals(processingpersonaldataactual)) {
-			System.out.println("Processing Personal Datal field: Loaded");
+			System.out.println("Processing Personal Data field: Loaded");
 		} else {
 			System.out.println("* FAILED *");
 		}
@@ -218,8 +218,6 @@ public class MainApp {
 		driver.findElement(By.id("broker_admin_name")).sendKeys(managername);
 		System.out.println("Account manager name: Entered.");
 
-		// driver.findElement(By.id("broker_person_password_repeat")).sendKeys(secondpass);
-		// System.out.println("Same password defined second time.")
 
 		// suggest a secure password" and remember it
 		driver.findElement(By.linkText("suggest a secure password")).click();
