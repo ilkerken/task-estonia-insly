@@ -22,7 +22,7 @@ public class MainApp {
 	public XSSFCell cell;
 	public File src;
 
-	// Selenium driver variables 
+	// Selenium  driver variables 
 	WebDriver driver;
 	WebDriverWait wait1;
 
