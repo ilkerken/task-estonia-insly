@@ -22,7 +22,7 @@ public class MainApp {
 	public XSSFCell cell;
 	public File src;
 
-	// Selenium driver variables test
+	// Selenium driver variables 
 	WebDriver driver;
 	WebDriverWait wait1;
 
@@ -185,7 +185,7 @@ public class MainApp {
 		driver.findElement(By.id("prop_company_profile")).sendKeys(companyprofile);
 		System.out.println("Company_profile: Selected");
 
-		// Selecting Company profile
+		// Selecting Number of employees
 		cell = sheet.getRow(0).getCell(3);
 		String numberofemployees = cell.getStringCellValue();
 		driver.findElement(By.id("prop_company_no_employees")).sendKeys(numberofemployees);
